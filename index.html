@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Smart City Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="Search attractions...">
+        <button onclick="searchAttractions()">Search</button>
+        <ul id="searchResults"></ul>
+    </section>
+
+    <section class="weather">
+        <h2>Current Weather</h2>
+        <p id="weatherInfo">Fetching weather...</p>
+    </section>
+
+    <section class="transport">
+        <h2>Public Transport Info</h2>
+        <button onclick="getTransportInfo()">Show Buses & Metro</button>
+        <p id="transportData"></p>
+    </section>
+
+    <div id="chatbot-container">
+        <button onclick="toggleChatbot()">💬 Chat with Assistant</button>
+        <div id="chatbot-box" style="display: none;">
+            <p><strong>Chatbot:</strong> Hello! How can I assist you?</p>
+            <input type="text" id="userInput" placeholder="Ask me something..." onkeypress="handleChat(event)">
+            <p id="chatbotResponse"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Smart City Guide. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
